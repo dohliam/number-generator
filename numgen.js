@@ -9,9 +9,10 @@ function numgen() {
   z = parseInt(zeros.value);
 
   output.value = "";
+  f = fseparator();
   for (i=s; i<=e; i++) {
     n = padding(i, z);
-    output.value = output.value + n + "\n";
+    output.value = output.value + n + f;
   }
 }
 
@@ -31,4 +32,18 @@ function repeater(x, n) {
     o += x;
   }
   return o;
+}
+
+function toggle_options() {
+  options = document.getElementById("options_div");
+  if (options.style.display != "none") {
+    options.style.display = "none";
+  } else {
+    options.style.display = "";
+  }
+}
+
+function fseparator() {
+  fieldsep = window.fieldsep;
+  return fieldsep.value.replace(/\\n/g, '\n').replace(/\\t/g, '\t')
 }

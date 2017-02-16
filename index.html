@@ -13,11 +13,16 @@
     <center>
       <h2>Number Generator</span></h2>
       <textarea type="text" rows="25" cols="10" style="font-size: 16px" value=""   id="output"></textarea>
-      <p><input type="button" onclick="numgen();" value="generate numbers"></p>
-      from <input type="number" value="1" id="startnum"> 
-      to <input type="number" value="10" id="endnum">
+      <p><input type="button" onclick="numgen()" value="generate numbers"></p>
+      from <input type="number" value="1" id="startnum" onclick="numgen()"> 
+      to <input type="number" value="10" id="endnum" onclick="numgen()">
       <br>
-      Zero padding: <input type="number" id="zeros" name="zeros" value="1" min="1">
+      <p><input type="checkbox" name="advanced" id="advanced" value="y" onchange="toggle_options()"><strong>Advanced options</strong></p>
+      <div id="options_div" style="display:none;">
+        Zero padding: <input type="number" id="zeros" name="zeros" value="1" min="1" onclick="numgen()">
+        <br>
+        Field separator: <input type="text" value="\n" id="fieldsep" onkeyup="numgen()">
+      </div>
     </center>
   </body>
 </html>
