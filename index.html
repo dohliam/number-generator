@@ -2,7 +2,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <title>Number Generator</title>
-    <link rel="stylesheet" type="text/css" href="https://dohliam.github.io/dropin-minimal-css/vendor/milligram.min.css"> 
+    <link rel="stylesheet" type="text/css" href="https://dohliam.github.io/dropin-minimal-css/vendor/milligram.min.css">
     <style type="text/css">
       @media (min-width: 40.0rem) { textarea, input[type='text'], input[type='number'] { height: auto; width: auto; } }
     </style>
@@ -14,8 +14,8 @@
       <h2>Number Generator</span></h2>
       <textarea type="text" rows="25" cols="10" style="font-size: 16px" value=""   id="output"></textarea>
       <p><input type="button" onclick="numgen()" value="generate numbers"></p>
-      from <input type="number" value="1" id="startnum" onclick="numgen()"> 
-      to <input type="number" value="10" id="endnum" onclick="numgen()">
+      from <input type="number" value="1" id="startnum" onclick="numgen()" onkeyup="numgen()">
+      to <input type="number" value="10" id="endnum" onclick="numgen()" onkeyup="numgen()">
       <br>
       <p><input type="checkbox" name="advanced" id="advanced" value="y" onchange="toggle_options()"><strong>Advanced options</strong></p>
       <div id="options_div" style="display:none;">
