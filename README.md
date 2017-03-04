@@ -8,20 +8,24 @@ The other thing is that there could be quite a lot of numbers needed in a given 
 
 Also, numbers may frequently need to be padded with zeros to a certain number of digits. This is absurdly simple, so long as it's not being done manually. But opening up a spreadsheet all the time for something so simple also seems wrong. This simple number generator solves that.
 
+## Demo
+
+An online demo is available [here](https://dohliam.github.io/tiny_tools/numgen/).
+
 ## Usage
 
 Enter a number in the `from` and `to` fields and click on __Generate Numbers__.
 
 Optionally, add a number of digits to pad with zeros in the `Zero padding` field and generate numbers as normal.
 
-If the zero padding field is set to `0` or `1`, no padding will be used. If it is set to `2`, then the sequence from 1-10 will look like this: `01 02 03 04 05 06 07 08 09 10`. If it is set to `3` the same sequence will look like this: `001 002 003 004 005 006 007 008 009 010`.
+If the zero padding field is set to `0` or `1`, no padding will be used. If it is set to `2`, then each number in the sequence will be padded to two digits, and the sequence from 1-10 will look like this: `01 02 03 04 05 06 07 08 09 10`. If it is set to `3`, numbers will be padded to three digits, and the same sequence will look like this: `001 002 003 004 005 006 007 008 009 010`.
 
 The numbers in the list can be separated by any string of characters (including newlines `\n`, tabs `\t`, commas, spaces, etc.) by adjusting the value in the `Field separator` box.
 
 ## To implement
 
 ~~* Arbitrary field separators~~
-* Prepend to list
+* Prepend numbers to list
 
 ## See also
 
